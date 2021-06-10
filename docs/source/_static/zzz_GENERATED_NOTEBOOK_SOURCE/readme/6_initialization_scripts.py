@@ -1,7 +1,7 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC ##<img src="https://databricks.com/wp-content/themes/databricks/assets/images/databricks-logo.png" alt="logo" width="240"/> 
-# MAGIC ### Genomics Technical Guide
+# MAGIC ### <img src="https://databricks-knowledge-repo-images.s3.us-east-2.amazonaws.com/HLS/glow/project_glow_logo.png" alt="logo" width="35"/> Glow Technical Guide
 # MAGIC 
 # MAGIC ##### [Initialization](https://docs.databricks.com/clusters/init-scripts.html#cluster-node-initialization-scripts) scripts for single node tools
 
@@ -11,7 +11,7 @@
 # MAGIC 
 # MAGIC Note: Cluster node init scripts, which run during startup for each cluster node before the Spark driver or worker JVM starts
 # MAGIC 
-# MAGIC Note: Please use PyPi or Docker over init scripts
+# MAGIC Note: PyPi, CRAN or Docker are preferred over init scripts
 # MAGIC 
 # MAGIC Upload the init script to dbfs with the Databricks file system command line interface ([CLI](https://docs.databricks.com/dev-tools/databricks-cli.html#dbfs-cli))
 # MAGIC 
@@ -60,4 +60,4 @@ chmod +x vep
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC <img src="https://docs.databricks.com/_images/init-scripts-aws.png" alt="logo" width="400"/>
+# MAGIC <img src="https://docs.databricks.com/_images/init-scripts-aws.png" alt="logo" width="500"/>

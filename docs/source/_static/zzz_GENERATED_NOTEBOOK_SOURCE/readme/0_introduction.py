@@ -3,7 +3,7 @@
 # MAGIC ##<img src="https://databricks.com/wp-content/themes/databricks/assets/images/databricks-logo.png" alt="logo" width="240"/> 
 # MAGIC ### Solve the n+1 problem in genomics 
 # MAGIC 
-# MAGIC ### with <img width="175px" src="https://docs.delta.io/latest/_static/delta-lake-logo.png"> __+__ Glow <img src="https://databricks-knowledge-repo-images.s3.us-east-2.amazonaws.com/HLS/glow/project_glow_logo.png" alt="logo" width="35"/> 
+# MAGIC ### with <img width="175px" src="https://docs.delta.io/latest/_static/delta-lake-logo.png"> & <img src="https://databricks-knowledge-repo-images.s3.us-east-2.amazonaws.com/HLS/glow/project_glow_logo.png" alt="logo" width="35"/> Glow 
 # MAGIC 
 # MAGIC This quickstart readme guide walks through how to manage and install genomics libraries on Databricks 
 # MAGIC 

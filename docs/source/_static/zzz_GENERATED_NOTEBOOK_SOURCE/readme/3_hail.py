@@ -1,9 +1,12 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC ##<img src="https://databricks.com/wp-content/themes/databricks/assets/images/databricks-logo.png" alt="logo" width="240"/> 
-# MAGIC ### Genomics Technical Guide
-# MAGIC 
-# MAGIC ##### Install Hail
+# MAGIC ### <img src="https://databricks-knowledge-repo-images.s3.us-east-2.amazonaws.com/HLS/glow/project_glow_logo.png" alt="logo" width="35"/> Glow Technical Guide
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ##### <img src="https://hail.is/static/hail-logo-cropped-sm-opt.png" alt="logo" width="50"/>
 
 # COMMAND ----------
 
