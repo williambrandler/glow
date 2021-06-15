@@ -8,94 +8,18 @@
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ##### From your laptop build and push Dockerfile
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC ```
-# MAGIC cd vep
-# MAGIC docker build -f Dockerfile . 
-# MAGIC docker build -t projectglow/vep . 
-# MAGIC docker push projectglow/vep:latest
-# MAGIC ```
-
-# COMMAND ----------
-
-# MAGIC %md
+# MAGIC 
+# MAGIC ##### Set up a cluster using the Docker Image URL
+# MAGIC 
 # MAGIC Find the latest version of this Docker container at,
 # MAGIC 
 # MAGIC https://hub.docker.com/r/projectglow/vep
+# MAGIC 
+# MAGIC The VEP Dockerfile can be found on projectglow under `glow/docs/dev/docker/`
 
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC Dockerfile
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC ```
-# MAGIC FROM databricksruntime/standard:latest 
-# MAGIC   
-# MAGIC ARG DEBIAN_FRONTEND=noninteractive
-# MAGIC 
-# MAGIC ENV TZ=America/New_York
-# MAGIC 
-# MAGIC RUN apt-get update && apt-get install -y \ 
-# MAGIC     build-essential \
-# MAGIC     git \
-# MAGIC     apt-transport-https \
-# MAGIC     ca-certificates \
-# MAGIC     cpanminus \ 
-# MAGIC     libpng-dev \ 
-# MAGIC     zlib1g-dev \ 
-# MAGIC     libbz2-dev \ 
-# MAGIC     liblzma-dev \ 
-# MAGIC     perl \ 
-# MAGIC     perl-base \ 
-# MAGIC     unzip \
-# MAGIC     curl \
-# MAGIC     gnupg2 \ 
-# MAGIC     software-properties-common \ 
-# MAGIC     jq \
-# MAGIC     libjemalloc1 \ 
-# MAGIC     libjemalloc-dev \ 
-# MAGIC     libdbi-perl \ 
-# MAGIC     libdbd-mysql-perl \ 
-# MAGIC     libdbd-sqlite3-perl
-# MAGIC # ===== Set up VEP environment =====================================================================
-# MAGIC ENV OPT_SRC /opt/vep/src
-# MAGIC 
-# MAGIC ENV PERL5LIB $PERL5LIB:$OPT_SRC/ensembl-vep:$OPT_SRC/ensembl-vep/modules
-# MAGIC RUN cpanm DBI && \
-# MAGIC     cpanm Set::IntervalTree && \
-# MAGIC     cpanm JSON && \
-# MAGIC     cpanm Text::CSV && \
-# MAGIC     cpanm Module::Build && \
-# MAGIC     cpanm PerlIO::gzip && \
-# MAGIC     cpanm IO::Uncompress::Gunzip
-# MAGIC                         
-# MAGIC RUN mkdir -p $OPT_SRC
-# MAGIC 
-# MAGIC WORKDIR $OPT_SRC
-# MAGIC 
-# MAGIC RUN git clone https://github.com/Ensembl/ensembl-vep.git WORKDIR ensembl-vep
-# MAGIC   
-# MAGIC # The commit is the most recent one on release branch 100 as of July 29, 2020
-# MAGIC RUN git checkout 10932fab1e9c113e8e5d317e1f668413390344ac && \
-# MAGIC     perl INSTALL.pl --NO_UPDATE -AUTO a && \
-# MAGIC     perl INSTALL.pl -n -a p --PLUGINS AncestralAllele && \ 
-# MAGIC     chmod +x vep
-# MAGIC ```
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC Go to your DockerHub page and you will see the repository ([example](https://hub.docker.com/r/projectglow/vep))
-# MAGIC 
-# MAGIC Now, set up a cluster on the demo shard with the Docker Image URL
-# MAGIC 
 # MAGIC <img src="https://databricks-knowledge-repo-images.s3.us-east-2.amazonaws.com/HLS/glow/vep_docker_container_cluster.png" alt="logo" width="700"/>
 
 # COMMAND ----------
