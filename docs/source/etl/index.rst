@@ -13,6 +13,7 @@ enabling seamless manipulation, filtering, quality control and transformation be
 
    variant-data
    gff
+   simulate-data
    vcf2delta
    variant-qc
    sample-qc
